@@ -6,6 +6,7 @@ func main() {
 	aboutIf()
 	aboutFor()
 	multiplication()
+	aboutGoto()
 }
 
 func aboutIf() {
@@ -58,4 +59,18 @@ func multiplication() {
 		}
 		fmt.Printf("\n")
 	}
+}
+
+func aboutGoto() {
+	for i := 1; i < 10; i++ {
+		for j := 1; j <= i; j++ {
+			fmt.Printf("%dx%d=%d  ", i, j, i*j)
+			if j > 2 {
+				goto TAG
+			}
+		}
+		fmt.Printf("\n")
+	}
+TAG:
+	fmt.Println("goto 语句跳到了这里")
 }
